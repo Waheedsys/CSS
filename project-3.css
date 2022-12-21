@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    font-family: sans-serif;
+}
+.box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#fff,#757575 );
+overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 5px;
+    background:#000 ;
+
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translatex(-50%);
+    width: 5px;
+    height: 100%;
+    background:#000 ;
+
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 500px;
+    border: 5px solid #fff ;
+    border-radius: 50%;
+    z-index: 1;
+}
+.circle.circle-2{
+    width: 600px;
+    height: 600px;
+}
+.niddle{
+    position: absolute;
+    top: calc(50% - 2px);
+    height: 4px;
+    left: 50%;
+    width: 1200px;
+    background:#000 ;
+    animation: animate 1s linear infinite;
+    transform-origin: left;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    
+}
+
+}
+.numbers{
+    position: absolute;
+    width:100%
+    
+}
+
+.numbers div{
+position: absolute;
+top: 0;
+left:0;
+width: 100%;
+height: 100%;
+font-size: 25em;
+font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+animation: animatenumber 10s linear infinite;
+
+}
+
+.numbers div:nth-child(1){
+animation-delay: 0s;
+}
+.numbers div:nth-child(2){
+animation-delay: 1s;
+}
+.numbers div:nth-child(3){
+animation-delay: 2s;
+}
+.numbers div:nth-child(4){
+animation-delay: 3s;
+}
+.numbers div:nth-child(5){
+animation-delay: 4s;
+}
+.numbers div:nth-child(6){
+animation-delay: 5s;
+}
+
+.numbers div:nth-child(7){
+animation-delay: 6s;
+}
+
+.numbers div:nth-child(8){
+animation-delay: 7s;
+}
+
+.numbers div:nth-child(9){
+animation-delay: 8s;
+}
+
+.numbers div:nth-child(10){
+animation-delay: 9s;
+}
+
+@keyframes animatenumber{
+    0%,10%{
+       
+        opacity: 1;
+    }
+
+    10.01% ,100%{
+        opacity: 0;
+    }
+}
+
